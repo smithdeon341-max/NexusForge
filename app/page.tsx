@@ -23,7 +23,7 @@ export default function BusinessIndexPage() {
   };
 
   return (
-    <main className="min-h-screen bg-black flex items-center justify-center p-4 font-mono text-sky-400">
+    <main className="min-h-screen bg-black flex items-center justify-center p-4 font-mono text-sky-400 text-center">
       <div className="w-full max-w-md bg-zinc-950 rounded-3xl shadow-[0_30px_80px_rgba(0,0,0,0.75)] border border-zinc-800 overflow-hidden">
         {/* Header Section */}
         <div className="border border-zinc-700 rounded-b-none rounded-t-3xl p-8 text-center relative overflow-hidden bg-zinc-950/95">
@@ -39,20 +39,20 @@ export default function BusinessIndexPage() {
         <div className="h-3 bg-white" />
 
         {/* Input Section */}
-        <div className="p-8 space-y-6 bg-white border-t border-zinc-800">
-          <div className="flex items-start gap-3 mb-6 bg-zinc-900 p-4 rounded-3xl border border-zinc-800">
+        <div className="p-8 space-y-6 bg-white border-t border-zinc-800 text-center">
+          <div className="flex flex-col items-center gap-3 mb-6 bg-zinc-900 p-4 rounded-3xl border border-zinc-800">
             <ShieldCheck className="text-sky-400 shrink-0" size={24} />
             <p className="text-sm text-white leading-relaxed">
               This is a secure, invite-only portal. Enter the access code provided by your administrator.
             </p>
           </div>
 
-          <form onSubmit={handleVerifyCode} className="space-y-6">
+          <form onSubmit={handleVerifyCode} className="space-y-6 mx-auto max-w-md text-center">
             <div className="space-y-2">
-              <label htmlFor="code" className="text-sm font-bold text-sky-400 uppercase tracking-[0.35em]">
+              <label htmlFor="code" className="text-sm font-bold text-sky-400 uppercase tracking-[0.35em] block">
                 Access Code
               </label>
-              <div className="relative">
+              <div className="relative mx-auto max-w-xl">
                 <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                   <KeyRound className="h-5 w-5 text-sky-400" />
                 </div>
@@ -71,7 +71,7 @@ export default function BusinessIndexPage() {
             <button
               type="submit"
               disabled={isLoading || !inviteCode}
-              className="w-full rounded-3xl border border-zinc-800 bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70 flex items-center justify-center gap-2"
+              className="w-full rounded-3xl border border-zinc-800 bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70 flex items-center justify-center gap-2 mx-auto"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
@@ -84,7 +84,7 @@ export default function BusinessIndexPage() {
             </button>
           </form>
 
-          <div className="mt-8 text-center border-t border-zinc-800 pt-6">
+          <div className="mt-8 border-t border-zinc-800 pt-6">
             <p className="text-sm text-sky-400 uppercase tracking-[0.35em]">
               Are you an administrator? <a href="/admin/login" className="text-sky-400 font-bold hover:underline">Sign in here</a>
             </p>
