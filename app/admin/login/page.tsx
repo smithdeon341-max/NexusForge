@@ -25,16 +25,16 @@ export default function AdminLoginPage() {
       <div className="w-full max-w-lg rounded-3xl border border-zinc-800 bg-zinc-950 shadow-[0_30px_80px_rgba(0,0,0,0.9)] overflow-hidden">
         <div className="p-8 text-center bg-zinc-950 border-b border-zinc-700">
           <ShieldCheck className="mx-auto mb-4 text-sky-400" size={48} />
-          <h1 className="text-3xl font-black uppercase tracking-[0.35em]">Admin Login</h1>
-          <p className="mt-3 text-sm uppercase text-sky-300 tracking-[0.35em]">Secure console access</p>
+          <h1 className="text-3xl font-black uppercase tracking-[0.35em] text-sky-400">Admin Login</h1>
+          <p className="mt-3 text-sm uppercase text-sky-400 tracking-[0.35em]">Secure console access</p>
         </div>
 
         <div className="h-3 bg-white" />
 
-        <div className="p-8 bg-zinc-950">
+        <div className="p-8 bg-white border-t border-zinc-800">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="username" className="block text-xs uppercase tracking-[0.35em] text-sky-300 mb-2">
+              <label htmlFor="username" className="block text-xs uppercase tracking-[0.35em] text-sky-400 mb-2">
                 Username
               </label>
               <div className="relative">
@@ -47,13 +47,13 @@ export default function AdminLoginPage() {
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   required
-                  className="w-full rounded-3xl border border-zinc-800 bg-white px-4 py-4 pl-12 text-black outline-none transition focus:border-sky-500"
+                  className="w-full rounded-3xl border border-zinc-800 bg-sky-500/10 px-4 py-4 pl-12 text-black outline-none transition focus:border-sky-500"
                 />
               </div>
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-xs uppercase tracking-[0.35em] text-sky-300 mb-2">
+              <label htmlFor="password" className="block text-xs uppercase tracking-[0.35em] text-sky-400 mb-2">
                 Password
               </label>
               <input
@@ -62,14 +62,14 @@ export default function AdminLoginPage() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 required
-                className="w-full rounded-3xl border border-zinc-800 bg-white px-4 py-4 text-black outline-none transition focus:border-sky-500"
+                className="w-full rounded-3xl border border-zinc-800 bg-sky-500/10 px-4 py-4 text-black outline-none transition focus:border-sky-500"
               />
             </div>
 
             <button
               type="submit"
               disabled={isLoading || !username || !password}
-              className="w-full rounded-3xl bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70"
+              className="w-full rounded-3xl border border-zinc-800 bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70"
             >
               {isLoading ? 'Signing in…' : 'Sign In'}
             </button>

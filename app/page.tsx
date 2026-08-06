@@ -32,23 +32,24 @@ export default function BusinessIndexPage() {
           <h1 className="text-3xl md:text-4xl uppercase font-black text-sky-400 tracking-[0.45em] leading-tight">
             NexusForge LLC
           </h1>
-          <p className="text-sky-300 text-sm md:text-base mt-3 uppercase tracking-[0.35em]">
+          <p className="text-sky-400 text-sm md:text-base mt-3 uppercase tracking-[0.35em]">
             Enterprise Management Portal
           </p>
         </div>
+        <div className="h-3 bg-white" />
 
         {/* Input Section */}
-        <div className="p-8 space-y-6 bg-zinc-950/95 border-t border-zinc-800">
+        <div className="p-8 space-y-6 bg-white border-t border-zinc-800">
           <div className="flex items-start gap-3 mb-6 bg-zinc-900 p-4 rounded-3xl border border-zinc-800">
             <ShieldCheck className="text-sky-400 shrink-0" size={24} />
-            <p className="text-sm text-sky-300 leading-relaxed">
+            <p className="text-sm text-white leading-relaxed">
               This is a secure, invite-only portal. Enter the access code provided by your administrator.
             </p>
           </div>
 
           <form onSubmit={handleVerifyCode} className="space-y-6">
             <div className="space-y-2">
-              <label htmlFor="code" className="text-sm font-bold text-sky-300 uppercase tracking-[0.35em]">
+              <label htmlFor="code" className="text-sm font-bold text-sky-400 uppercase tracking-[0.35em]">
                 Access Code
               </label>
               <div className="relative">
@@ -62,7 +63,7 @@ export default function BusinessIndexPage() {
                   onChange={(e) => setInviteCode(e.target.value.toUpperCase())}
                   placeholder="e.g. NF-8392A"
                   required
-                  className="w-full pl-11 pr-4 py-4 bg-zinc-900 border border-zinc-800 rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all font-mono font-bold tracking-[0.25em] text-sky-200 placeholder:text-sky-500"
+                  className="w-full pl-11 pr-4 py-4 bg-white border border-zinc-800 rounded-3xl focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-all font-mono font-bold tracking-[0.25em] text-black placeholder:text-zinc-500"
                 />
               </div>
             </div>
@@ -70,7 +71,7 @@ export default function BusinessIndexPage() {
             <button
               type="submit"
               disabled={isLoading || !inviteCode}
-              className="w-full bg-sky-500 hover:bg-sky-400 text-black font-bold py-4 rounded-3xl shadow-[0_20px_40px_rgba(14,165,233,0.25)] transition-all flex items-center justify-center gap-2 disabled:opacity-70"
+              className="w-full rounded-3xl border border-zinc-800 bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70 flex items-center justify-center gap-2"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
@@ -84,7 +85,7 @@ export default function BusinessIndexPage() {
           </form>
 
           <div className="mt-8 text-center border-t border-zinc-800 pt-6">
-            <p className="text-sm text-sky-400">
+            <p className="text-sm text-sky-400 uppercase tracking-[0.35em]">
               Are you an administrator? <a href="/admin/login" className="text-sky-400 font-bold hover:underline">Sign in here</a>
             </p>
           </div>
