@@ -91,7 +91,13 @@ export default function BusinessIndexPage() {
           </div>
         </div>
         <div className="h-3 bg-white" />
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 
+<form action="/signup" method="POST">
+  <!-- your form fields -->
+  <div class="cf-turnstile" data-sitekey="YOUR_SITE_KEY"></div>
+  <button type="submit">Sign up</button>
+</form>
         {/* Footer Section */}
         <div className="border-t border-zinc-700 p-6 text-center bg-zinc-950/95 glow-border">
           <p className="text-sky-400 uppercase tracking-[0.35em] text-sm font-semibold glow-text">
