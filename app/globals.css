@@ -39,3 +39,12 @@ select {
 ::selection {
   background: rgba(56, 189, 248, 0.35);
 }
+
+/* Global glow effect for electric blue text and borders */
+.glow-border {
+  box-shadow: 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.glow-text {
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.45);
+}
