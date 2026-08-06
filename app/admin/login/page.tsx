@@ -23,10 +23,10 @@ export default function AdminLoginPage() {
   return (
     <main className="min-h-screen bg-black text-sky-400 flex items-center justify-center p-4">
       <div className="w-full max-w-lg rounded-3xl border border-zinc-800 bg-zinc-950 shadow-[0_30px_80px_rgba(0,0,0,0.9)] overflow-hidden">
-        <div className="p-8 text-center bg-zinc-950 border-b border-zinc-700">
-          <ShieldCheck className="mx-auto mb-4 text-sky-400" size={48} />
-          <h1 className="text-3xl font-black uppercase tracking-[0.35em] text-sky-400">Admin Login</h1>
-          <p className="mt-3 text-sm uppercase text-sky-400 tracking-[0.35em]">Secure console access</p>
+        <div className="p-8 text-center bg-zinc-950 border-b border-zinc-700 glow-border">
+          <ShieldCheck className="mx-auto mb-4 text-sky-400 glow-text" size={48} />
+          <h1 className="text-3xl font-black uppercase tracking-[0.35em] text-sky-400 glow-text">Admin Login</h1>
+          <p className="mt-3 text-sm uppercase text-sky-400 tracking-[0.35em] glow-text">Secure console access</p>
         </div>
 
         <div className="h-3 bg-white" />
@@ -69,7 +69,7 @@ export default function AdminLoginPage() {
             <button
               type="submit"
               disabled={isLoading || !username || !password}
-              className="w-full rounded-3xl border border-zinc-800 bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70"
+              className="w-full rounded-3xl border border-zinc-800 bg-sky-500 px-6 py-4 text-black font-bold transition hover:bg-sky-400 disabled:opacity-70 glow-border"
             >
               {isLoading ? 'Signing in…' : 'Sign In'}
             </button>
@@ -78,9 +78,9 @@ export default function AdminLoginPage() {
 
         <div className="h-3 bg-white" />
 
-        <div className="p-6 text-center bg-zinc-950 border-t border-zinc-700">
-          <p className="text-sky-400 uppercase tracking-[0.35em] text-sm font-semibold">A.W.O.F. Conglomerate</p>
-          <p className="text-sky-400 uppercase tracking-[0.35em] text-sm font-semibold mt-2">Deon Smith</p>
+        <div className="p-6 text-center bg-zinc-950 border-t border-zinc-700 glow-border">
+          <p className="text-sky-400 uppercase tracking-[0.35em] text-sm font-semibold glow-text">A.W.O.F. Conglomerate</p>
+          <p className="text-sky-400 uppercase tracking-[0.35em] text-sm font-semibold mt-2 glow-text">Deon Smith</p>
         </div>
       </div>
     </main>
