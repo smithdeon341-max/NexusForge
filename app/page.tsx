@@ -89,6 +89,7 @@ export default function BusinessIndexPage() {
             </p>
           </div>
         </div>
+        <div className="h-3 bg-white" />
 
         {/* Footer Section */}
         <div className="border-t border-zinc-700 p-6 text-center bg-zinc-950/95">
